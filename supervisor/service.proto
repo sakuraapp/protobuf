@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package="github.com/sakuraapp/protobuf/supervisorpb";
+
+package service;
+
+service SupervisorService {
+  rpc Deploy(DeployRequest) returns (DeployResponse) {}
+}
+
+message DeployRequest {
+  int64 roomId = 1;
+  optional string region = 2;
+}
+
+message DeployResponse {
+  string nodeId = 1;
+}

@@ -13,6 +13,4 @@ message DeployRequest {
   optional string region = 2;
 }
 
-message DeployResponse {
-  string nodeId = 1;
-}
+message DeployResponse {}

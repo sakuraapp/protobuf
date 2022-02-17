@@ -6,6 +6,7 @@ package service;
 
 service SupervisorService {
   rpc Deploy(DeployRequest) returns (DeployResponse) {}
+  rpc Destroy(DestroyRequest) returns (DestroyResponse) {}
 }
 
 message DeployRequest {
@@ -18,4 +19,12 @@ message DeployRequest {
   optional Region region = 2;
 }
 
-message DeployResponse {}
+message DeployResponse {
+}
+
+message DestroyRequest {
+  int64 roomId = 1;
+}
+
+message DestroyResponse {
+}

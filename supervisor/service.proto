@@ -9,8 +9,12 @@ service SupervisorService {
 }
 
 message DeployRequest {
+  enum Region {
+    euw = 0;
+  }
+
   int64 roomId = 1;
-  optional string region = 2;
+  optional Region region = 2;
 }
 
 message DeployResponse {}

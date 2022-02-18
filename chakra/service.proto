@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package="github.com/sakuraapp/protobuf/chakrapb";
+
+package service;
+
+service ChakraService {
+  rpc CreateStream(CreateRequest) returns (StreamInfo) {}
+}
+
+message CreateRequest {
+  string name = 1;
+}
+
+message StreamInfo {
+  string id = 1;
+  string nodeId = 2;
+}

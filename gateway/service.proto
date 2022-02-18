@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option go_package="github.com/sakuraapp/protobuf/gatewaypb";
+
+package service;
+
+service GatewayService {
+  rpc SetCurrentItem(SetCurrentItemRequest) returns (SetCurrentItemResponse) {}
+}
+
+message CurrentItem {
+  enum Type {
+    NORMAL = 0;
+    CHAKRA = 1;
+  }
+
+  string id = 1;
+  Type type = 2;
+  string url = 3;
+  string title = 4;
+  string icon = 5;
+}
+
+message SetCurrentItemRequest {
+  string roomId = 1;
+  CurrentItem item = 2;
+}
+
+message SetCurrentItemResponse {
+}

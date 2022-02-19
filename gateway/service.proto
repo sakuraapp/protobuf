@@ -16,9 +16,10 @@ message CurrentItem {
 
   string id = 1;
   Type type = 2;
-  string url = 3;
-  string title = 4;
-  string icon = 5;
+  int64 author = 3;
+  string url = 4;
+  string title = 5;
+  string icon = 6;
 }
 
 message SetCurrentItemRequest {

@@ -23,7 +23,7 @@ message CurrentItem {
 }
 
 message SetCurrentItemRequest {
-  string roomId = 1;
+  int64 roomId = 1;
   CurrentItem item = 2;
 }
 
